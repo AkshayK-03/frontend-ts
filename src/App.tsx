@@ -1,32 +1,35 @@
 import { Routes, Route } from "react-router-dom";
 import "./global.css";
-import SignUp from "./auth/forms/SignUp";
-import SignIn from "./auth/forms/SignIn";
+import SignIn from "./auth/NewUser/SignIn";
 import Home from "./root/pages/Home";
 import AuthLayout from "./auth/AuthLayout";
 import RootLayout from "./root/RootLayout";
-import Verification from "./auth/forms/Verification";
-import Details from "./auth/forms/Details";
-import Pincode from "./auth/forms/Pincode";
+import Verification from "./auth/NewUser/Verification";
+import Details from "./auth/NewUser/Details";
+import Pincode from "./auth/NewUser/Pincode";
+import AuthSignupLayout from "./auth/AuthSignupLayout";
+import SignUp from "./auth/ExistingUser/SignUp";
 
 const App = () => {
   return (
           <main className="flex h-screen">
             <Routes>
+              <Route element={<AuthSignupLayout/>}>
+                <Route path="/signup" element={<SignUp/>} />
+              </Route>
+              
                 {/**Public Routes */}
-                <Route element={<AuthLayout/>}>
-                    <Route path="/signup" element={<SignUp/>} />
-                    <Route path="/signin" element={<SignIn/>} />
-                    <Route path="/verification" element={<Verification/>}/>
-                    <Route path="/details" element={<Details/>} />
-                    <Route path="/pincode" element={<Pincode/>} />
-                </Route>
+              <Route element={<AuthLayout/>}>
+                <Route path="/signin" element={<SignIn/>} />
+                <Route path="/verification" element={<Verification/>}/>
+                <Route path="/details" element={<Details/>} />
+                <Route path="/pincode" element={<Pincode/>} />
+              </Route>
 
                 {/**Private Routes */}
-                <Route element={<RootLayout/>}>
-                    <Route index element={<Home />}/>
-                </Route>
-                
+              <Route element={<RootLayout/>}>
+                <Route index element={<Home />}/>
+              </Route>    
             </Routes>
 
           </main>

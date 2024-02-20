@@ -1,6 +1,7 @@
 import { Button, Input } from "@material-tailwind/react";
 const Details = () => {
   return (
+    <>
       <div className="detail-container">
         <h3 className="txt-1">Check your details</h3>
         <h4 className="txt-2">We know you</h4>
@@ -13,6 +14,7 @@ const Details = () => {
         </div>
         <h5 className="txt-3">*Details in this page are not editable. Please write us to <a href="mailto:countedin.app@gmail.com" className="link">countedin.app@gmail.com</a>  if incorrect details are displayed.</h5>
       </div>
+    </>
     
   )
 }

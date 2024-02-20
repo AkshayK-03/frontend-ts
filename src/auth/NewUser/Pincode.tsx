@@ -1,8 +1,7 @@
 import { Input , Button } from "@material-tailwind/react"
 const Pincode = () => {
   return (
-    <>
-      <div className="right-container">
+    
         <div className="row2">
           <div className="signup-form">
             <h3 className="v-txt1">Setup 4 digit PIN</h3>
@@ -17,8 +16,6 @@ const Pincode = () => {
             
           </div>
         </div>
-      </div>
-    </>
   )
 }
 

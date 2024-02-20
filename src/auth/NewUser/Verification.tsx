@@ -2,8 +2,7 @@ import { Input, Button } from "@material-tailwind/react"
 
 const Verification = () => {
     return (
-        <>
-          <div className="right-container">
+
             <div className="row2">
               <div className="signup-form">
                 <h3 className="txt-1">Enter the verification code</h3>
@@ -17,8 +16,6 @@ const Verification = () => {
                 
               </div>
             </div>
-          </div>
-        </>
       )
     }
 
