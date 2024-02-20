@@ -5,15 +5,18 @@ const AuthLayout = () => {
   return (
     <>
       {isAuthenticated ? (
-        <Navigate to='/'/>
+        <Navigate to='/veification'/>
       ): (
         <>
 
-          <div className="flex flex-right-100 justify-center items-center bg-sky-100 screen-width" >
-            <img src="public/assets/Images/signin.png" alt="signin" width="200px" height="100px" />
+          <div className="flex flex-right-100  justify-center items-center left-container screen-width" >
+            <img src="public/assets/Images/siginin.png" alt="signin" width="279.43px" height="546px"/>
           </div>
 
           <section className="right-container">
+            <div className="row1">
+              <img src="public/assets/Images/Frame.png" alt="logo" width="128.4px" height="30.64px" />
+            </div>
             <Outlet/>
           </section>
         </>

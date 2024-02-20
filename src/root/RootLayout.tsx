@@ -1,8 +1,10 @@
+import { Home } from "./pages"
 
 
 const RootLayout = () => {
   return (
-    <div>RootLayout</div>
+    <div><Home/>
+    </div>
   )
 }
 

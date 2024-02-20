@@ -1,8 +1,13 @@
-import React from 'react'
-
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="frame">
+      <div className="frame1">1
+      </div>
+      <div className="frame2">2
+      </div>
+      <div className="frame3">3
+      </div>
+    </div>
   )
 }
 
